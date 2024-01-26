@@ -4,11 +4,11 @@ _default:
 
 # assemble the rust-dev distrobox shell
 assemble:
-  SHELL=/usr/bin/fish distrobox assemble create
+  env SHELL=/usr/bin/fish distrobox assemble create
 
 # enter the dev shell
 dev:
-  distrobox enter rust-dev --additional-flags "--env EDITOR=/usr/bin/vim"
+  env EDITOR=/usr/bin/vim distrobox enter rust-dev
 
 # locally build the OCI image
 build:
